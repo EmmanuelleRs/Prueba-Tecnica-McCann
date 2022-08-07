@@ -1,6 +1,6 @@
 from django.urls import path
 #
-from .views import IndexView
+from .api import VehiclesAPI
 urlpatterns = [
-    path('', IndexView.as_view(), name='index')
+    path('api/vehicles/', VehiclesAPI.as_view(), name='api-vehicles')
 ]
