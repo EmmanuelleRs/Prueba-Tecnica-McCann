@@ -9,7 +9,7 @@ class RegistyAPI(APIView):
         serializer = RegistrySerializer(data = request.data)
         if serializer.is_valid():
             serializer.save()
-            return Response(serializer.data)
+            return Response({'success': True})
         else:
             return Response(serializer.errors)
 

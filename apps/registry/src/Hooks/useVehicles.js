@@ -13,7 +13,7 @@ export default function useVehicles() {
         }
 
         return (
-            <select onChange={setBrand} className='form-control'>
+            <select name='brand' onChange={setBrand} className='form-control'>
                  <option value="">Selecciona Marca</option>
                 {data.length > 0 ? data.map(vehicle => <option value={vehicle.brand_name} key={vehicle.brand_name}>{vehicle.brand_name}</option>) : null}
             </select>
@@ -28,7 +28,7 @@ export default function useVehicles() {
             setValues({...values, vehicle: e.target.value});
         }
         return (
-            <select onChange={selectVehicle} className='form-control'> 
+            <select name='vehicle' onChange={selectVehicle} className='form-control'> 
                 <option value="">Selecciona Vehiculo</option>               
                 {vehicles.length > 0 ? vehicles.map(vehicle => <option value={vehicle.vehicle_name} key={vehicle.vehicle_name}>{vehicle.vehicle_name}</option>) : null}
             </select>

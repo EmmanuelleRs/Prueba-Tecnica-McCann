@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="mt-5">
+    <h3 class="text-center">
+        Inicie sesión para continuar
+    </h3>
+    <form method="POST">{% csrf_token %}
+        <div class="row">
+            <div class="col-12 mb-3">
+                <label for="username">Usuario</label>
+                {{form.username}}
+            </div>
+            <div class="col-12 mb-3">
+                <label>Contraseña</label>
+                {{form.password}}
+            </div>
+
+                
+            <div class="col-12 mb-3">
+                <button class="btn btn-secondary btn-lg btn-block" type="submit">Iniciar</button>
+            </div>
+        </div>
+        <!-- <a href="/dashboard/signin">Crear usuario</a> -->
+    </form>
+</div>
+{% endblock content %}
+    

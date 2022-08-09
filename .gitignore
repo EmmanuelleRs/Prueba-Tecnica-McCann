@@ -6,6 +6,6 @@ __pycache__/
 node_modules/
 *-lock.json
 
-*.sqlite-3
+*.sqlite3
 
 

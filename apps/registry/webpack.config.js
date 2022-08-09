@@ -5,7 +5,7 @@ module.exports = {
   entry: "./src/index.js",
   output: {
     path: path.resolve(__dirname, "../../static/js"),
-    filename: "react_cars.js",
+    filename: "react_regisgtry.js",
   },
   module: {
     rules: [
