@@ -22,6 +22,10 @@ deploy_staging:
   environment:
     name: staging
     url: https://mccann-prove.emmanuellecode-base.com
+  tags:
+  - emmanuellecode-stage
+  only:
+  - staging
 
 deploy_production:
   stage: production
@@ -44,3 +48,7 @@ deploy_production:
 
     name: production
     url: https://mccann-prove.emmanuellecode.com
+  tags:
+  - emmanuellecode-prod
+  only:
+  - master
