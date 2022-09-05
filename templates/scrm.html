@@ -1,0 +1,24 @@
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<div class="ui inverted menu">
+    <div class="item">
+        <a href="/dashboard/auth"><i class="left circle arrow icon"></i> Regresar</a>
+    </div>
+    <div class="right menu">
+        <div class="item">
+            <a href="/dashboard/logout"><i class="logout icon"></i>Salir</a>
+        </div>
+    </div>
+</div>
+<div class="ui container">
+    <div class="ui compact segment">
+        <h3 class="ui header">{{registymodel.firstname}} {{registymodel.lastname}}</h3>
+        <nav class="ui list">
+            <li class="item">{{registymodel.phone}}</li>
+            <li class="item">{{registymodel.email}}</li>
+        </nav>
+        <div class="ui label">{{registymodel.vehicle}}</div>
+    </div>
+</div>
