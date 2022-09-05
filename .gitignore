@@ -4,8 +4,12 @@ __pycache__/
 *.pyc
 
 node_modules/
-static/js/react*.js
+react_*.js
+react_*.js.LICENSE.txt
 *-lock.json
+
+global.css
+global.css.map
 
 *.sqlite3
 
