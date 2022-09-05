@@ -23,7 +23,7 @@ deploy_staging:
     name: staging
     url: https://mccann-prove.emmanuellecode-base.com
   tags:
-  - emmanuellecode-stage
+  - Emmanuelle-Raya-stg
   only:
   - staging
 
@@ -49,6 +49,6 @@ deploy_production:
     name: production
     url: https://mccann-prove.emmanuellecode.com
   tags:
-  - emmanuellecode-prod
+  - Emmanuelle-Raya-prod
   only:
   - master
