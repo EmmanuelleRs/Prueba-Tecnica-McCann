@@ -13,6 +13,5 @@ global.css.map
 
 *.sqlite3
 
-
 *IGNORE SNYK CACHE
 *.dccache
