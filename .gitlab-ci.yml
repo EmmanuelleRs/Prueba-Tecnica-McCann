@@ -18,7 +18,6 @@ deploy_staging:
   - virtualenv/bin/python manage.py collectstatic --noinput
   - virtualenv/bin/python manage.py loaddata fixtures/brands.json
   - virtualenv/bin/python manage.py loaddata fixtures/cars.json
-  after_script:
   - touch /data/web/env_files/.env_mccannprove_stg
   environment:
     name: staging
