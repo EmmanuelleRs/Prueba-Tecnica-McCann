@@ -1,0 +1,54 @@
+stages:
+  - staging
+  - production
+
+deploy_staging:
+  stage: staging
+  before_script:
+  - touch /data/web/env_files/.env_mccannprove_stg
+  - ln -s /data/web/env_files/.env_mccannprove_stg /data/web/stage/mccann-prove.emmanuellecode-base.com/mccann_prove/.env
+  - npm --prefix ./apps/registry install
+  - npm --prefix ./apps/registry run build
+  - sass static/css/global.scss static/css/global.css
+  script:
+  - python3 -m venv virtualenv
+  - virtualenv/bin/pip install -r requeriments.txt
+  - virtualenv/bin/pip install uWSGI
+  - virtualenv/bin/python manage.py migrate
+  - virtualenv/bin/python manage.py collectstatic --noinput
+  - virtualenv/bin/python manage.py loaddata fixtures/brands.json
+  - virtualenv/bin/python manage.py loaddata fixtures/cars.json
+  - touch /data/web/env_files/.env_mccannprove_stg
+  environment:
+    name: staging
+    url: https://mccann-prove.emmanuellecode-base.com
+  tags:
+  - Emmanuelle-Raya-stg
+  only:
+  - staging
+
+deploy_production:
+  stage: production
+  before_script:
+  - npm --prefix ./apps/registry install
+  - npm --prefix ./apps/registry run build
+  - sass static/css/global.scss static/css/global.css 
+  script:
+  - python3 -m venv virtualenv
+  - virtualenv/bin/pip install -r requeriments.txt
+  - virtualenv/bin/pip install uWSGI
+  - virtualenv/bin/python manage.py migrate
+  - virtualenv/bin/python manage.py collectstatic --noinput
+  - touch /data/web/env_files/.env_mccannprove
+  - ln -s /data/web/env_files/.env_mccannprove /data/web/stage/mccann-prove.emmanuellecode.com/mccann_prove/.env
+  after_script:
+  - virtualenv/bin/python manage.py loaddata fixtures/brands.json
+  - virtualenv/bin/python manage.py loaddata fixtures/cars.json
+  environment:
+
+    name: production
+    url: https://mccann-prove.emmanuellecode.com
+  tags:
+  - Emmanuelle-Raya-prod
+  only:
+  - master

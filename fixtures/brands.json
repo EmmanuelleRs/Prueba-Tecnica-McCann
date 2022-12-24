@@ -1,0 +1,23 @@
+[
+{
+  "model": "cars.brandmodel",
+  "pk": 1,
+  "fields": {
+    "brand_name": "Chevrolet"
+  }
+},
+{
+  "model": "cars.brandmodel",
+  "pk": 2,
+  "fields": {
+    "brand_name": "Cadillac"
+  }
+},
+{
+  "model": "cars.brandmodel",
+  "pk": 3,
+  "fields": {
+    "brand_name": "GMC"
+  }
+}
+]

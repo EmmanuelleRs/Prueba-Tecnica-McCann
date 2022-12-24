@@ -1,0 +1,66 @@
+[
+{
+  "model": "cars.vehiclemodel",
+  "pk": 1,
+  "fields": {
+    "vehicle_name": "Onix",
+    "vehicle_brand": 1
+  }
+},
+{
+  "model": "cars.vehiclemodel",
+  "pk": 2,
+  "fields": {
+    "vehicle_name": "Aveo",
+    "vehicle_brand": 1
+  }
+},
+{
+  "model": "cars.vehiclemodel",
+  "pk": 3,
+  "fields": {
+    "vehicle_name": "XT4",
+    "vehicle_brand": 2
+  }
+},
+{
+  "model": "cars.vehiclemodel",
+  "pk": 4,
+  "fields": {
+    "vehicle_name": "XT5",
+    "vehicle_brand": 2
+  }
+},
+{
+  "model": "cars.vehiclemodel",
+  "pk": 5,
+  "fields": {
+    "vehicle_name": "Sierra",
+    "vehicle_brand": 3
+  }
+},
+{
+  "model": "cars.vehiclemodel",
+  "pk": 6,
+  "fields": {
+    "vehicle_name": "Terrain",
+    "vehicle_brand": 3
+  }
+},
+{
+  "model": "cars.vehiclemodel",
+  "pk": 7,
+  "fields": {
+    "vehicle_name": "Encore",
+    "vehicle_brand": 3
+  }
+},
+{
+  "model": "cars.vehiclemodel",
+  "pk": 8,
+  "fields": {
+    "vehicle_name": "Envision",
+    "vehicle_brand": 3
+  }
+}
+]

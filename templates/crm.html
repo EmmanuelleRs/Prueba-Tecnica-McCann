@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<div class="ui inverted menu">
+    <div class="right menu">
+        <div class="item">
+            <a href="/api/downloadCSV/"><i class="download icon"></i></a>
+        </div>
+        <div class="item">
+            <a href="/dashboard/logout"><i class="logout icon"></i>Salir</a>
+        </div>
+    </div>
+</div>
+<div class="ui container">
+    <table class="ui blue table">
+        <thead>
+            <tr>
+                <th class="collapsing">Id</th>
+                <th>Nombre completo</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Vehiculo de interés</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for li in list %}
+            <tr>
+                <td><a href="/dashboard/auth/{{li.id}}">{{li.id}}</a></td>
+                <td>{{li.firstname}} {{li.lastname}}</td>
+                <td>{{li.email}}</td>
+                <td>{{li.phone}}</td>
+                <td>{{li.vehicle}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+      </table>
+</div>

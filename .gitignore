@@ -1,9 +1,17 @@
 virtualenv/
+.env
 __pycache__/
 *.pyc
 
 node_modules/
+react_*.js
+react_*.js.LICENSE.txt
+*-lock.json
 
-.sqlite-3
+global.css
+global.css.map
 
+*.sqlite3
 
+*IGNORE SNYK CACHE
+*.dccache
